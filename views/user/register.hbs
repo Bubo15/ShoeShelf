@@ -1,0 +1,55 @@
+<h1>Register</h1>
+<p class="form-info">Already registered?
+    <a href="/login">Login now</a> and have some fun!
+</p>
+<form action="/register" method="POST">
+    <div>
+        <input type="email" name="email" value="{{email}}" placeholder="Email">
+    </div>
+
+    {{#each errors.email}}
+    <section class="notifications">
+        <h6 class="notification-message">{{this}}</h6>
+    </section>
+    {{/each}}
+
+    <div>
+        <input type="text" name="username" value="{{username}}" placeholder="Username">
+    </div>
+
+    {{#each errors.username}}
+    <section class="notifications">
+        <h6 class="notification-message">{{this}}</h6>
+    </section>
+    {{/each}}
+
+    <div>
+        <input type="password" name="password" placeholder="Password">
+    </div>
+
+
+    {{#each errors.password}}
+    <section class="notifications">
+        <h6 class="notification-message">{{this}}</h6>
+    </section>
+    {{/each}}
+
+    <div>
+        <input type="password" name="rePassword" placeholder="Re-password">
+    </div>
+
+    {{#each errors.rePassword}}
+    <section class="notifications">
+        <h6 class="notification-message">{{this}}</h6>
+    </section>
+    {{/each}}
+
+    <div>
+        <p class="message"></p>
+        <button>Register</button>
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.error}}</h6>
+    </section>
+</form>

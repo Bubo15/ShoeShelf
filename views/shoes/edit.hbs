@@ -1,0 +1,48 @@
+<h1>Edit Offer</h1>
+<p class="message"></p>
+<form action="/shoe/edit/{{id}}" method="POST">
+    <div>
+        <input type="text" name="name" placeholder="Name" value="{{name}}">
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.name}}</h6>
+    </section>
+
+    <div>
+        <input type="text" name="price" placeholder="Price" value="{{price}}">
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.price}}</h6>
+    </section>
+
+    <div>
+        <input type="text" name="imageUrl" placeholder="Image url" value="{{imageUrl}}">
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.imageUrl}}</h6>
+    </section>
+
+    <div>
+        <textarea name="description"
+            placeholder="Give us some description about this offer...">{{description}}</textarea>
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.description}}</h6>
+    </section>
+
+    <div>
+        <input type="text" name="brand" placeholder="Brand" value="{{brand}}">
+    </div>
+
+    <section class="notifications">
+        <h6 class="notification-message">{{errors.brand}}</h6>
+    </section>
+
+    <div>
+        <button>Edit</button>
+    </div>
+</form>

@@ -1,0 +1,37 @@
+<header>
+    <nav>
+        <ul>
+
+            {{#if isLogged}}
+         
+            <li>
+                <a href="/shoe/create">Create new offer</a>
+            </li>
+         
+            {{else}}
+         
+            <li class="site-logo">Shoe</li>
+         
+            {{/if}}
+
+            <li>
+                <a href="/">
+                    <img src="/public/sneakers.png" alt="">
+                </a>
+            </li>
+
+            {{#if isLogged}}
+         
+            <li>Welcome, {{username}} |
+                <a href="/logout">Logout</a>
+            </li>
+         
+            {{else}}
+          
+            <li class="site-logo">Shelf</li>
+          
+            {{/if}}
+        
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,43 @@
+<main>
+    <h1>Create New Offer</h1>
+    <p class="message"></p>
+    <form action="/shoe/create" method="POST">
+        <div>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+
+        <section class="notifications">
+            <h6 class="notification-message">{{errors.name}}</h6>
+        </section>
+
+        <div>
+            <input type="text" name="price" placeholder="Price">
+        </div>
+
+        <section class="notifications">
+            <h6 class="notification-message">{{errors.price}}</h6>
+        </section>
+
+        <div>
+            <input type="text" name="imageUrl" placeholder="Image url">
+        </div>
+
+        <section class="notifications">
+            <h6 class="notification-message">{{errors.imageUrl}}</h6>
+        </section>
+
+        <div>
+            <textarea name="description" placeholder="Give us some description about this offer..."></textarea>
+        </div>
+        <div>
+            <input type="text" name="brand" placeholder="Brand">
+        </div>
+        <div>
+            <button>Create</button>
+        </div>
+
+        <section class="notifications">
+            <h6 class="notification-message">{{errors.errorMessage}}</h6>
+        </section>
+
+    </form>
